@@ -1,0 +1,35 @@
+
+{
+  "manifest_version": 3,
+  "name": "test",
+	"description": "Vue3的Chrome插件",
+	"version": "1.0.0",
+	"action": {
+    "default_popup": "popup.html",
+    "default_icon": "assets/images/icon.png"
+  },
+	"permissions": [
+		"declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+	],
+	"background": {
+		"service_worker": "js/background.js"
+	},
+	"icons": {
+		"48": "assets/images/icon.png",
+    "1": "assets/images/icon-check-default.png",
+    "2": "assets/images/icon-check-selected.png",
+    "3": "assets/images/icon-edit.png",
+    "4": "assets/images/icon-save.png",
+    "5": "assets/images/icon-delete.png"
+	},
+	"content_scripts": [{
+		"matches": ["http://*/*", "https://*/*"],
+		"css": ["css/popup.css"],
+		"js": ["js/chunk-vendors.js"],
+		"run_at": "document_idle"
+	}],
+	"web_accessible_resources": [{
+		"resources": ["js/inject.js"],
+		"matches": ["<all_urls>"]
+	}]}
