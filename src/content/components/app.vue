@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-const a = ref('')
+const a = ref('');
 </script>
 
 <style scoped>
