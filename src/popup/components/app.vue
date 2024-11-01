@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup>
-const ass = ref();
+const ass = ref()
 const test = () => {
   chrome.tabs.getSelected(null, function(tab){
   chrome.tabs.sendRequest(tab.id, { popAction: "Test"});
