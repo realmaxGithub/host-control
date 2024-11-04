@@ -4,8 +4,6 @@
   </div>
 </template>
 <script setup lang="ts">
-  import { ref } from 'vue';
-  const a = ref('');
   const test = () => {
     chrome.tabs.getSelected(0, function (tab) {
       chrome.tabs.sendRequest(tab.id || 0, { popAction: 'Test' });
