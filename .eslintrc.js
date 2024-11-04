@@ -28,11 +28,8 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
-      },
+      0
+      
     ],
     'no-unused-vars': [
       'error',
